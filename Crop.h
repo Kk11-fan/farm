@@ -1,15 +1,15 @@
 #ifndef CROP_H
 #define CROP_H
-#include "FarmObject.h"
+#include "Farm.h"
 
-class Crop : public FarmObject{
+class Crop : public Farm{
     protected:
         string name;
         int age;
         int matureAge;
 
     public:
-        Crop(string n, int m) : name(n), age(0), matureAge(m) {}
+        Crop(string n, int m) : name(n), age(0), matureAge(m){}
 
         void update(Time& t){
             age++;

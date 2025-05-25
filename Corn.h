@@ -4,7 +4,7 @@
 
 class Corn : public Crop{
     public:
-        Corn() : Crop("Corn", 5){}
+        Corn():Crop("Corn", 5){}
 };
 
 #endif

@@ -3,29 +3,25 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "FarmObject.h"
+#include "Farm.h"
 using namespace std;
 
 class Player{
     private:
         float balance;
-        vector<FarmObject*> inventory;
+        vector<Farm*> inventory;
 
     public:
-        Player(float b = 50.0f) : balance(b){}
-
+        Player(float b = 50.0f):balance(b){}
         float getBalance(){
             return balance;
         }
-
         void adjustBalance(float amount){
             balance += amount;
         }
-
-        void addToInventory(FarmObject* item){
+        void addToInventory(Farm* item){
             inventory.push_back(item);
         }
-
         void showInventory(){
             cout << "--- Inventory ---" << endl;
             if (inventory.empty()){
